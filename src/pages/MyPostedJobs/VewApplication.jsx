@@ -11,7 +11,7 @@ const VewApplication = () => {
     console.log(e.target.value, application);
 
     axios
-      .patch(`http://localhost:3000/applications/${application}`, {
+      .patch(`https://career-code-server-6oxc1vg23-osmanbybds-projects.vercel.app/applications/${application}`, {
         status: e.target.value,
       })
       .then((res) => {

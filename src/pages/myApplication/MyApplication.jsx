@@ -2,7 +2,8 @@ import React, { Suspense } from 'react';
 import ApplicationState from './ApplicationState';
 import Applications from './Applications';
 import useAuth from '../../hook/useAuth';
-import { myApplicationPromise } from '../../api/applicationApi';
+import useApplicationApi from '../../api/usApplicationApi';
+
 
 
 
@@ -10,6 +11,7 @@ import { myApplicationPromise } from '../../api/applicationApi';
 const MyApplication = () => {
 
     const {user} = useAuth()
+    const {myApplicationPromise} = useApplicationApi()
     // console.log(user.accessToken)
 
 

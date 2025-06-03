@@ -28,16 +28,15 @@ const signOutUser = () =>{
     return signOut(auth)
 }
 
-
+//   withCredentials: true
+                
     useEffect(()=>{
         const unSubscribe = onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser)
             setLoading(false)
             if(currentUser?.email){
                 const userData = {email : currentUser.email}
-                axios.post('http://localhost:3000/jwt', userData, {
-                    withCredentials: true
-                })
+                axios.post('https://career-code-server-6oxc1vg23-osmanbybds-projects.vercel.app/jwt', userData,)
                 .then(res =>{
                     console.log(res.data)
                 })

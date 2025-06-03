@@ -31,7 +31,7 @@ const AddJob = () => {
 
     // save to the database
     axios
-      .post("http://localhost:3000/jobs", newJob)
+      .post("https://career-code-server-6oxc1vg23-osmanbybds-projects.vercel.app/jobs", newJob)
       .then((res) => {
         console.log(res);
         if (res.data.insertedId) {
